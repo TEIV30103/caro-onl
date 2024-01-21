@@ -1,0 +1,404 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;    
+    position: relative;
+}
+
+#a{
+    z-index: 1;
+}
+
+#header{
+    height: 70px;
+    background-color: darkseagreen;
+    overflow: hidden;
+}
+#title{
+    width: 22%;
+    height: 70px;
+    text-align: center;
+    display: inline;
+    float: left;
+    background-color: rgb(106, 150, 106);
+    margin-top: -1px;
+    padding: 20px ;
+    overflow: hidden;
+}
+
+#btDangNhap , #btDangXuat{
+    padding: 26px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(176, 224, 176);
+    float: right;
+}
+
+#txtXinChao{
+    display: inline-block;
+    padding: 18px;
+}
+
+#left , #right{
+    min-height: 800px;
+}
+
+#body{
+    width: 100%;
+}
+
+#left{
+    width: 25%;
+    float: left;
+    background-color: rgb(168, 219, 168);
+}
+
+#btBXH{
+    width: 50%;
+    float: left;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#btOnline{
+    width: 50%;
+    float: right;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#btChat{
+    width: 100%;
+    padding: 5px;
+}
+
+#valueBXH , #valueUserOnline{
+    width: 80%;
+    height: 470px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* overflow: scroll; */
+    transition: 1s;
+}
+
+#chatTong{
+    width: 99%;
+    height: 0px;
+    border: 1px black solid;
+    border-radius: 5px;
+    transition: 1s;
+    padding-top: 10px;
+    display: none;
+}
+
+#chatTong:hover{
+    overflow-y: scroll;
+}
+
+#txtChatTong{
+    width: 72.5%;
+    float: left;
+    height: 0px;
+    transition: 1s;
+    display: none;
+
+}
+
+#btGuiChatTong{
+    width: 25%;
+    float: right;
+    height: 0px;
+    transition: 1s;
+    display: none;
+
+
+}
+
+.messageChatTong{
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
+
+#bottom{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(106, 150, 106);
+}
+
+
+
+#right{
+    width: 75%;
+    float: right;
+}
+
+
+#btTaoPhong{
+    background-color: rgb(168, 219, 168);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#nhapThongTinTaoPhong{
+    margin: 5px;
+}
+
+#danhSachPhong{
+    height: 600px;
+    margin: 5px;
+    margin-top: 0px;
+    border: 1px solid rgb(223, 223, 190);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+#danhSachPhong:hover{
+    overflow-y: scroll;
+}
+
+.phong{
+    width: 700px;
+    height: 20px;
+    border: 1px solid black;
+    padding: 5px 0px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.stt{
+    padding: 8px 50px;
+    height: 20px;
+    border: 1px solid rgb(168, 219, 168);
+    border-radius: 70px;
+    background-color: rgb(168, 219, 168);
+}
+
+.tenPhong{
+    width: 180px;
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.theLoaiPhong{
+    width: 150px;
+    display: inline-block;
+    font-weight: 500;
+    border-left: 1px solid black;
+    transform: skew(-20deg);
+    padding-left: 15px;
+}
+
+.soNguoiHienCo , .soNguoiToiDa{
+    display: inline-block;
+    font-weight: 500;
+    transform: skew(-20deg);
+}
+
+.soNguoiHienCo{
+    border-left: 1px solid black;
+    margin-top: -1px;
+    padding-left: 15px;
+}
+.soNguoiToiDa{
+    margin-bottom: -2px;
+}
+
+.btVaoPhong{
+    height: 30px;
+    float: right;
+    text-align: center;
+    padding: 4px 20px;
+    border-radius: 70px;
+    border-style: none;
+    margin-top: -5px;
+    background-color: rgb(168, 219, 168);
+}
+
+#formDangNhap{
+    height: 400px;
+    width: 50%;
+    margin-left: 320px;
+    margin-top: 70px;
+
+}
+
+#btXNDK{
+    margin-top: 10px;
+    margin-left: 90px;
+    width: 100px;
+}
+
+
+.txtDN{
+    margin: 5px;
+}
+
+#btXN{
+    margin-top: 10px;
+    margin-left: 90px;
+    width: 100px;
+}
+
+#btDK{
+    border: none;
+    text-decoration: underline solid;
+    color: green;
+    font-size: 80%;
+}
+
+#ywtplp{
+    height: 10px;
+    font-size: 150%;
+    font-weight: 700;
+    margin-left: 320px;
+    transition: 2ms;
+}
+
+.userOnline{
+    text-align: center;
+}
+
+#banCo{
+    box-sizing: border-box;
+    width: 50%;
+    border-collapse: collapse;
+    margin: 50px 0 50px 80px;
+    float: left;
+}
+
+td {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+#optionTrongPhong{
+    box-sizing: border-box;
+    width: 30%;
+    float: right;
+    margin: 50px;
+    padding: 5px;
+}
+
+#list-message-room{
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    overflow: scroll;
+    margin-top: 10px;
+}
+
+#txtMessageRoom{
+    width: 77%;
+    height: 20px;
+    float: left;
+}
+
+#btSendMessageRoom{
+    width: 20%;
+    height: 26px;
+    float: right;
+}
+
+.messageServerSendRoom{
+    color: rgb(7, 206, 7);
+}
+
+#optionTrongPhongBT{
+    float: right;
+}
+
+#btSanSang{
+    background-color: rgb(121, 247, 121);
+}
+
+#btHuy{
+    background-color: rgb(202, 253, 101);
+}
+
+#btRoiPhong{
+    background-color: rgb(248, 74, 74);
+}
+
+.optionbt{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.abc{
+    display: inline-block;
+    width: 80px;
+}
+
+.red{
+    color: red;
+}
+
+.anhCup1{
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.anhCup2{
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    float: left;
+}
+
+.anhCup3{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    float: left;
+}
+
+#top4 , #top5{
+    height: 30px;
+    margin-left: 33px;
+}
+
+
+.top{
+    height: 80px;
+    margin-top: 10px;
+}
+
+#topCaNhan{
+    margin-top: 30%;
+}
+
+#aiWin{
+    display: inline-block;
+    height: 100px;
+    width: 30%;
+    position: fixed;
+    top:30%;
+    left: 32%;
+    background-color: rgb(192, 190, 190);
+    opacity:0.8;
+    text-align: center;
+    text-align: center;
+    padding-top:80px;
+    font-size:150%;
+    font-weight:800;
+}
+
+#txtTop1 , #txtTop2 , #txtTop3 , #soTranThangTop1 , #soTranThangTop2 , #soTranThangTop3{
+    display: inline-block;
+    padding-top: 15px;
+}
+
+#txtTop1 , #txtTop2 , #txtTop3 , #txtTop4 , #txtTop5 ,#txtTopCaNhan{
+    display: inline-block;
+    width: 80px;
+}

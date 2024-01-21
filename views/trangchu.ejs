@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh Cờ Caro Online</title>
+    <script src="jquery.js"></script>
+    <script src="https://cr-onl-pqv-20197430c0c5.herokuapp.com/socket.io/socket.io.js"></script>
+    <script src="xuLy.js"></script>
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="layout.css">
+</head> 
+<body>
+    <div id="a">
+        <div id="header">
+            <h2 id="title">Caro Online</h2>
+            <input type="button" id="btDangNhap" value="Đăng Nhập">
+            <input type="button" id="btDangXuat" value="Đăng Xuất">
+            <p id="txtXinChao"></p>
+        </div>
+        <div id="body">
+            <div id="left">
+                <input type="button" value="BXH" id="btBXH">
+                <input type="button" value="User Online" id="btOnline">
+                <div id="valueBXH">
+                    <div id="top1" class="top">
+                        <img src="/anh/cup-vang.png" class="anhCup1" alt="" srcset="">
+                        <span id="txtTop1">...</span>
+                        <span id="soTranThangTop1"></span>
+                    </div>
+                    <div id="top2" class="top">
+                        <img src="/anh/cup-bac.png" class="anhCup2" alt="" srcset="">
+                        <span id="txtTop2">...</span>
+                        <span id="soTranThangTop2"></span>
+                    </div>
+                    <div id="top3" class="top">
+                        <img src="/anh/cup-dong.png" class="anhCup3" alt="" srcset="">
+                        <span id="txtTop3">...</span>
+                        <span id="soTranThangTop3"></span>
+                    </div>
+                    <div id="top4" class="top">
+                        <span>4&emsp;</span>
+                        <span id="txtTop4">...</span>
+                        <span id="soTranThangTop4"></span>
+                    </div>
+                    <div id="top5" class="top">
+                        <span>5&emsp;</span>
+                        <span id="txtTop5">...</span>
+                        <span id="soTranThangTop5"></span>
+                    </div>
+                    <div id="topCaNhan" class="top">
+                        <span id="topBanThan">&emsp;</span>
+                        &emsp;
+                        <span id="txtTopCaNhan">...</span>
+                        <span id="soTranThangTopCaNhan"></span>
+                    </div>
+                </div>
+                <div id="valueUserOnline">
+                    
+                </div>
+                
+                <input type="button" value="Chat Tổng" id="btChat">
+                <div id="chatTong">
+                    
+                </div>
+                <div>
+                    <input type="text" placeholder="Nhập tin nhắn" id="txtChatTong">
+                    <input type="button" value="Gửi" id="btGuiChatTong">
+                </div>
+                <div id="bottom"></div>
+            </div>
+            <div id="right">
+                <div id="dangNhap">
+
+                    <p id="ywtplp">You want to play , let's play</p>
+                    <div id="formDangNhap">
+                        <span class="abc">Tài Khoản :</span>
+                        <input type="text" class="txtDN" id="txtTaiKhoan" placeholder="Nhập Tài Khoản"><span id="loi-ten-tk" class="red"></span>
+                        <br>
+                        <span class="abc">Mật Khẩu :</span>
+                        <input type="password" class="txtDN" id="txtPassWord" placeholder="Nhập Mật Khẩu"><span id="loi-password" class="red"></span>
+                        <br>
+                        <div id="txtDK">
+                            <span class="abc">Nhập lại Mật Khẩu :</span>
+                            <input type="password" class="txtDN" id="txtRePassWord" placeholder="Nhập Lại Mật Khẩu"><span id="loi-repassword" class="red"></span>
+                            <br>
+                            <span class="abc">Tên :</span>
+                            <input type="text" class="txtDN" id="txtHoTen" placeholder="Nhập Họ Tên"><span id="loi-ten-user" class="red"></span>
+                        <br>
+                        </div>
+                        <input type="button" id="btXN" value="Xác Nhận">
+                        <input type="button" id="btXNDK" value="Xác Nhận">
+                        <input type="button" id="btDK" value="Đăng Ký">
+                    </div>
+
+                </div>
+
+                <div id="ngoaiPhong">
+                    <div id="optionNgoaiPhong">
+                        <input type="button" id="btTaoPhong" value="+ Tạo Phòng">
+                        <div id="nhapThongTinTaoPhong">
+                            <input type="text" name="" id="txtTenPhong" placeholder="Nhập Tên Phòng">
+                            <input type="button" id="btXNTaoPhong" value="Xác Nhận">
+                            <input type="button" id="btHTaoPhong" value="Huỷ">
+                        </div>
+                    </div>
+                    <div id="danhSachPhong">
+                        <p>Danh Sách Phòng Hiện Có</p>
+                    </div>
+                </div>
+                <div id="vaoPhong">
+                    <span id="aiWin"></span>
+                    <div id="banCo">
+                        
+                    </div>
+                    <div id="optionTrongPhong">
+                        <div id="optionTrongPhongBT">
+                            <input type="button" class="optionbt" id="btSanSang" value="Sẵn Sàng">
+                            <input type="button" class="optionbt" id="btHuy" value="Huỷ Sẵn Sàng">
+                            <input type="button" class="optionbt" id="btRoiPhong" value="Rời Phòng">
+                            <p id="luot"></p>
+                        </div>
+                        <div id="list-message-room">
+                            
+                        </div>
+                        <input type="text" placeholder="Nhập tin nhắn" id="txtMessageRoom">
+                        <input type="button" value="Gửi" id="btSendMessageRoom"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+    
+    
+</body>
+</html>
